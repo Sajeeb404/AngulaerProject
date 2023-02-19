@@ -1,0 +1,61 @@
+
+<div style="margin-top: 100px; margin-left: 200px;">
+  <form [formGroup]="forms" (ngSubmit)="submit()">
+    <div>
+      <label for="">Name</label><br />
+      <input type="text" name="name" id="" formControlName="name"/>
+    </div>
+
+    <div>
+      <label for="gen">Gender</label><br />
+      <input type="radio"  id="gen" name="genders" formControlName="genders" value="Male"/>Male
+      <input type="radio"  id="gen" name="genders" formControlName="genders" value="Female"/>Female
+    </div>
+
+    <div>
+      <label for="">Education</label><br />
+      <input type="checkbox" name="ssc" id="" formControlName="ssc"/>SSC
+      <input type="checkbox" name="hsc" id="" formControlName="hsc"/>HSC
+      <input type="checkbox" name="msc" id="" formControlName="msc"/>HSC
+    </div>
+
+    <div>
+      <label for="">Country</label><br />
+      <select name="country" id="" formControlName="country">
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="India">India</option>
+      </select>
+      <br />
+      <br />
+      <button type="submit" >Submit</button>
+    </div>
+  </form>
+</div>
+
+<div style="margin-top: 100px; margin-left: 200px">
+  <table border="2">
+    <thead>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Education</th>
+      <th>Country</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </thead>
+
+    <tr *ngFor="let c of userlist">
+      <td>{{c.name}}</td>
+      <td>{{c.genders}}</td>
+      <td>
+        <b *ngIf="c.ssc">SSC </b>
+        <b *ngIf="c.hsc">HSC </b>
+        <b *ngIf="c.msc">MSC </b>     
+    </td>
+      <td>{{c.country}}</td>
+      <td><input type="button" name="" id="" (click)="edits(c)" value="Edit"></td>
+      <td><input type="button" name="" id="" (click)="deletes(c)" value="Delete"></td>
+    
+    </tr>
+  </table>
+</div>

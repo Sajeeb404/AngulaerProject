@@ -1,0 +1,22 @@
+{
+  "userlist": [
+    {
+      "id": 1,
+      "name": "Md. Ashraful Islam",
+      "genders": "Male",
+      "ssc": true,
+      "hsc": true,
+      "msc": true,
+      "country": "Bangladesh"
+    },
+    {
+      "id": 4,
+      "name": "Mahbubmolla",
+      "genders": "Male",
+      "ssc": null,
+      "hsc": true,
+      "msc": null,
+      "country": "Pakistan"
+    }
+  ]
+}
